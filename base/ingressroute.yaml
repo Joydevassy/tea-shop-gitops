@@ -1,0 +1,16 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: tea-shop
+  namespace: tea-shop
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`tea.ehdf.com`)
+      kind: Rule
+      services:
+        - name: tea-shop
+          port: 80
+  tls:
+    secretName: tea-shop-tls

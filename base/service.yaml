@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tea-shop
+  namespace: tea-shop
+spec:
+  selector:
+    app: tea-shop
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP
