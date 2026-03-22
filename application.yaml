@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://git@github.com:Joydevassy/tea-shop-gitops.git
+    repoURL: https://github.com/Joydevassy/tea-shop-gitops.git
     targetRevision: main
     path: base
   destination:
