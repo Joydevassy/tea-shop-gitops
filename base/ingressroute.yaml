@@ -5,12 +5,10 @@ metadata:
   namespace: tea-shop
 spec:
   entryPoints:
-    - websecure
+    - web
   routes:
     - match: Host(`tea.ehdf.com`)
       kind: Rule
       services:
         - name: tea-shop
           port: 80
-  tls:
-    secretName: tea-shop-tls
